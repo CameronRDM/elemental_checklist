@@ -1,4 +1,4 @@
-<img width="483" height="370" alt="Elemental Creatures TCG Banner" src="https://github.com/user-attachments/assets/631f6169-9414-4428-bbf1-3613ac96fefd" />
+[<img width="483" height="370" alt="Elemental Creatures TCG Banner" src="https://github.com/user-attachments/assets/631f6169-9414-4428-bbf1-3613ac96fefd" />](https://elementalcreaturestcg.com/index.php)
 
 https://elementalcreaturestcg.com/index.php
 
