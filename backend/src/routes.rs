@@ -31,9 +31,10 @@ pub async fn get_sets(pool: &State<PgPool>) -> Result<Json<Vec<Set>>, rocket::ht
 }
 
 #[get("/sets/<set_id>/cards")]
-pub async fn get_cards(pool: &State<PgPool>, set_id: Uuid) -> Result<Json<Vec<Card>>, rocket::http::Status> {
+pub async fn get_cards(pool: &State<PgPool>, set_id: &str) -> Result<Json<Vec<Card>>, rocket::http::Status> {
+    let parsed_id = Uuid::parse_str(set_id).map_err(|_| rocket::http::Status::BadRequest)?;
     let cards = sqlx::query_as::<_, Card>("SELECT * FROM cards WHERE set_id = $1 ORDER BY number")
-        .bind(set_id)
+        .bind(parsed_id)
         .fetch_all(pool.inner())
         .await
         .map_err(|_| rocket::http::Status::InternalServerError)?;
