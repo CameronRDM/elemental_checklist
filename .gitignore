@@ -1,2 +1,31 @@
-output/*
-elemental_progress.json
+# General
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+output/
+python_app/elemental_progress.json
+
+# Node & React (Frontend)
+node_modules/
+dist/
+dist-ssr/
+
+# Rust & Cargo (Backend)
+/backend/target/
+**/*.rs.bk
+
+# CDK & Infrastructure
+/infrastructure/node_modules/
+/infrastructure/cdk.out/
+.cdk.staging/

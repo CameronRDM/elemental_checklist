@@ -1,3 +1,9 @@
+# Author: HamsterNugs
+# Date: 05/20/2026
+# GitHub: CameronRDM (CameronRDM is not HamsterNugs!)
+# Version: 0.1.0
+# Description: A simple checklist application for Elemental Creatures TCG.
+
 import tkinter as tk
 from tkinter import ttk
 import json
